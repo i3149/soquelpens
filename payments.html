@@ -609,19 +609,19 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 <div class="price-chart-wrapper">
     <table class="price-chart  buttonLocation-Top">
         <tr class="buttons-middle">
-                <td class="cell">
+                <td class="cell" style="padding:0px 5px;">
 <paypal-add-to-cart-button data-id="WH63GCL5ZE7Q8"></paypal-add-to-cart-button>
 <script>
   cartPaypal.AddToCart({ id: "WH63GCL5ZE7Q8" })
 </script>
 </td>
-                <td class="cell">
+                <td class="cell" style="padding:0px 5px;">
 <paypal-add-to-cart-button data-id="5HMJFLEKKAM2Y"></paypal-add-to-cart-button>
 <script>
   cartPaypal.AddToCart({ id: "5HMJFLEKKAM2Y" })
 </script>
 </td>
-                <td class="cell">
+                <td class="cell" style="padding:0px 5px;">
 <paypal-add-to-cart-button data-id="VV5HC3525ZG6L"></paypal-add-to-cart-button>
 <script>
   cartPaypal.AddToCart({ id: "VV5HC3525ZG6L" })
@@ -722,19 +722,19 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
 <div class="price-chart-wrapper">
     <table class="price-chart  buttonLocation-Top">
         <tr class="buttons-middle">
-          <td class="cell">
+          <td class="cell" style="padding:0px 5px;">
 <paypal-add-to-cart-button data-id="Z2HL5PCDRB3PW"></paypal-add-to-cart-button>
 <script>
   cartPaypal.AddToCart({ id: "Z2HL5PCDRB3PW" })
 </script>
           </td>
-          <td class="cell">
+          <td class="cell" style="padding:0px 5px;">
 <paypal-add-to-cart-button data-id="NMYXVSSNL2DUS"></paypal-add-to-cart-button>
 <script>
   cartPaypal.AddToCart({ id: "NMYXVSSNL2DUS" })
 </script>
           </td>
-          <td class="cell">
+          <td class="cell" style="padding:0px 5px;">
 <paypal-add-to-cart-button data-id="XUCFG6GWTYH8C"></paypal-add-to-cart-button>
 <script>
   cartPaypal.AddToCart({ id: "XUCFG6GWTYH8C" })
@@ -756,140 +756,7 @@ _W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":
     </table>
 </div>
 </div>
-<div style="clear:both;"></div><script type="text/javascript" class="element-script">function setupElement989406462157566229() {
-	var requireFunc = window.platformElementRequire || window.require;
-
-	// Relies on a global require, specific to platform elements
-	requireFunc([
-		'w-global',
-		'underscore',
-		'jquery',
-		'backbone',
-		'util/platform/elements/PlatformElement',
-		'util/platform/elements/PlatformElementSettings'
-	], function(
-		_W,
-		_,
-		$,
-		Backbone,
-		PlatformElement,
-		PlatformElementSettings
-	) {
-		var dependencies = null || [];
-		var platform_element_id = "325178514791279925-1.2.7";
-
-		if (typeof _W.loadedPlatformDependencies === 'undefined') {
-			_W.loadedPlatformDependencies = [];
-		}
-
-		if (typeof _W.platformElements === 'undefined') {
-			_W.platformElements = [];
-		}
-
-		if (typeof _W.platformElements[platform_element_id] === 'undefined') {
-			_W.platformElements[platform_element_id] = {};
-			_W.platformElements[platform_element_id].deferredObject = new $.Deferred();
-			_W.platformElements[platform_element_id].deferredPromise = _W.platformElements[platform_element_id].deferredObject.promise();
-		}
-
-		if(_.intersection(_W.loadedPlatformDependencies, dependencies).length !== dependencies.length){
-			_.reduce(dependencies, function(promise, nextScript){
-				_W.loadedPlatformDependencies.push(nextScript);
-				return promise.then(function(){
-					return $.getScript(nextScript);
-				});
-			}, $().promise()).then(function(){
-				_W.platformElements[platform_element_id].deferredObject.resolve();
-			});
-		}
-
-		if (dependencies.length === 0){
-			_W.platformElements[platform_element_id].deferredObject.resolve();
-		}
-
-		_W.platformElements[platform_element_id].deferredPromise.done(function(){
-			var _ElementDefinition = /**
- * This is required for element rendering to be possible
- * @type {PlatformElement}
- *
- * we normalize the styles on initial load.
- */
-
-(function() {
-    var PricingTable = PlatformElement.extend({
-        initialize: function() {
-            this.fixStyles();
-        },
-        // normalizes the styles of all element children.
-        fixStyles: function() {
-            this.$('li.wsite-text').each(function(index, value) {
-                var $value = $(value);
-                var defaultText = $value.data('default-text');
-                var $el = $(value).find('.editable-text');
-                if ($el.text() === defaultText) {
-                    $el.attr('style', '');
-                }
-            });
-
-            this.$('.element').each(function(index) {
-                $(this).attr('style', '');
-            });
-        }
-    });
-
-    return PricingTable;
-})();;
-
-			if (typeof _ElementDefinition == 'undefined' || typeof _ElementDefinition == 'null') {
-				var _ElementDefinition = PlatformElement.extend({});
-			}
-
-			var _Element = _ElementDefinition.extend({
-				initialize: function() {
-					// we still want to call the initialize function defined by the developer
-					// however, we don't want to call it until placeholders have been replaced
-					this.placeholderInterval = setInterval(function() {
-						// so use setInterval to check for placeholders.
-						if (this.$('.platform-element-child-placeholder').length == 0) {
-							clearInterval(this.placeholderInterval);
-							this.constructor.__super__.initialize.apply(this);
-						}
-					}.bind(this), 100);
-				}
-			});
-
-			_Element.prototype.settings = new PlatformElementSettings({"plans_each":[{"plans_index":0},{"plans_index":1},{"plans_index":2}],"features_each":[{"features_index":0}],"plans":3,"features":1,"location":"Top","alignment":"center","currency":"'$'","titleColor":"#F8F8F8","backgroundColor":"#FFFFFF","numberColor":"#222222","borderColor":"#C9CDCF"});
-			_Element.prototype.settings.page_element_id = "989406462157566229";
-
-			_Element.prototype.element_id = "8e725555-e445-493a-9fc5-48df4963dcda";
-			_Element.prototype.user_id = "64940231";
-			_Element.prototype.site_id = "371663783442606631";
-			_Element.prototype.assets_path = "//marketplace.editmysite.com/uploads/b/marketplace-elements-325178514791279925-1.2.7/assets/";
-			new _Element({
-				el: '#element-8e725555-e445-493a-9fc5-48df4963dcda'
-			});
-		});
-	});
-
-}
-
-if (typeof document.documentElement.appReady == 'undefined') {
-	document.documentElement.appReady = 0;
-}
-
-if (document.documentElement.appReady || (window.inEditor && window.inEditor())) {
-	setupElement989406462157566229();
-} else if (document.createEvent && document.addEventListener) {
-	document.addEventListener('appReady', setupElement989406462157566229, false);
-} else {
-	document.documentElement.attachEvent('onpropertychange', function(event){
-		if (event.propertyName == 'appReady') {
-			setupElement989406462157566229();
-		}
-	});
-}
-
-</script></div></div>
+</div></div>
 			</div>
 		</div>
       </div>
@@ -916,7 +783,7 @@ if (document.documentElement.appReady || (window.inEditor && window.inEditor()))
 
 <div class="paragraph" style="text-align:left;"><a href="contact-us.html" target="_blank"><strong><font size="4">397 OLD SAN JOSE RD.</font></strong><br /><font size="4"><strong>SOQUEL, CA 95073</strong></font><br /><strong><font size="5">&#8203;831.429.3464</font></strong></a><br />&#8203;</div>
 
-<div class="paragraph" style="text-align:left;"><font size="1">&copy; COPYRIGHT 2015. ALL RIGHTS RESERVED.</font></div>
+<div class="paragraph" style="text-align:left;"><font size="1">&copy; COPYRIGHT 2026. ALL RIGHTS RESERVED.</font></div>
 
 
 
