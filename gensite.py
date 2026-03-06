@@ -6,15 +6,20 @@ from liquid import render
 from os import listdir
 from os.path import isfile, join
 
+import json
+
 templates_dir = "templates"
 env = Environment(loader=CachingFileSystemLoader(templates_dir, ext=".html"))
 
 output_dir = "public"
 files = [f for f in listdir(templates_dir) if isfile(f)]
 
+with open('data.json', 'r') as file:
+    data = json.load(file)
+
 for f in files:
     template = env.get_template(f)
-    data = {"foo": 42, "bar": "hello"}
+    data[f]["url"] = f
 
     with open("public/%s" % (f), "w") as file:
-        file.write(template.render(**data))
+        file.write(template.render(page = data[f]))
